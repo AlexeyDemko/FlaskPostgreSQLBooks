@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update/{{books.id}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="author" value="{{books.author}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="title" value="{{books.title}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="publication_date" value="{{books.publication_date}}" class="form-control">
+          </div>
+            <div class="form-group">
+            <input type="text" name="language" value="{{books.language}}" class="form-control">
+          </div>
+            <div class="form-group">
+            <input type="text" name="programming_language" value="{{books.programming_language}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
